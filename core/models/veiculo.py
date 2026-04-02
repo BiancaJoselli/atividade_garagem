@@ -13,8 +13,8 @@ class Veiculo(models.Model):
     cor = models.ForeignKey(
         Cor, on_delete=models.PROTECT, related_name='veiculos', null=True, blank=True
         )
-    acessorios = models.ForeignKey(
-        Acessorio, on_delete=models.PROTECT, related_name='veiculos', null=True, blank=True
+    acessorios = models.ManyToManyField(
+        Acessorio,related_name='veiculos', null=True, blank=True
         )
 
     def __str__(self):
