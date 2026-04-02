@@ -2,6 +2,7 @@
 Django admin customization.
 """
 
+from atexit import register
 from pyexpat import model
 
 from django.contrib import admin
@@ -54,6 +55,7 @@ class UserAdmin(BaseUserAdmin):
 
 admin.site.register(models.User, UserAdmin)
 admin.site.register(models.Acessorio)
+admin.site.register (models.Cor)
 admin.site.register(models.Modelo)
 admin.site.register(models.Veiculo)
 
