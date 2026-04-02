@@ -19,3 +19,9 @@ class Veiculo(models.Model):
 
     def __str__(self):
         return f"({self.id}) {self.modelo} {self.cor} {self.ano}"
+    
+    class Meta:
+        """Meta options for the model."""
+
+        verbose_name = 'Veículo'
+        verbose_name_plural = 'Veículos'
